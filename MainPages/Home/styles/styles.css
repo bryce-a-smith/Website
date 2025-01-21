@@ -1,11 +1,11 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: radial-gradient(circle at center, white 1%, purple 5%, blue 10%, black 40%),
-    radial-gradient(circle at 25% 25%, rgba(0, 128, 128, 0.3), transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(0, 128, 128, 0.3), transparent 50%);
+  background: linear-gradient(to top left, black 40%, transparent 50%, black 60%),
+    linear-gradient(to top right, black 40%, transparent 50%, black 60%),
+    radial-gradient(circle, rgba(0, 128, 128, 0.4) 20%, transparent 60%);
   background-color: black; /* Default black background for fallback */
-  background-blend-mode: lighten, darken;
+  background-blend-mode: screen;
   color: #fff;
   overflow-x: hidden;
 }
