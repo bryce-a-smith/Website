@@ -10,20 +10,20 @@ body {
   text-align: center;
   padding: 60px 20px; /* Increased padding for emphasis */
   color: #fff;
-  text-shadow: 0 0 10px #6a0dad, 0 0 20px #6a0dad, 0 0 30px #8b008b; /* Purple glow */
+  text-shadow: 0 0 10px gray, 0 0 20px #006400; /* Gray and Green shadows */
 }
 
 .header h1 {
   font-size: 4rem;
   margin: 0;
-  text-shadow: 0 0 15px #6a0dad, 0 0 25px #8b008b, 0 0 40px #9400d3; /* Glowing effect for h1 */
+  text-shadow: 0 0 15px gray, 0 0 25px #006400; /* Gray and Green glowing effect for h1 */
 }
 
 .header p {
   font-size: 1.2rem;
   margin-top: 10px;
   color: #aaa;
-  text-shadow: 0 0 8px #6a0dad, 0 0 15px #8b008b; /* Subtle purple glow */
+  text-shadow: 0 0 8px gray, 0 0 15px #006400; /* Subtle gray and green glow */
 }
 
 .navbar {
@@ -39,13 +39,13 @@ body {
   margin: 0 20px;
   font-size: 1.1rem;
   font-weight: bold;
-  text-shadow: 0 0 5px #6a0dad, 0 0 10px #9400d3; /* Purple glow */
+  text-shadow: 0 0 5px gray, 0 0 10px #006400; /* Gray and Green shadows */
   transition: color 0.3s, text-shadow 0.3s;
 }
 
 .navbar a:hover {
-  color: #dda0dd; /* Light purple hover */
-  text-shadow: 0 0 12px #8b008b, 0 0 20px #dda0dd; /* Stronger purple glow */
+  color: #32cd32; /* Light green hover */
+  text-shadow: 0 0 12px #006400, 0 0 20px #32cd32; /* Strong green glow on hover */
 }
 
 .section {
@@ -56,7 +56,7 @@ body {
 .section h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  text-shadow: 0 0 10px #6a0dad, 0 0 20px #8b008b; /* Glowing purple effect */
+  text-shadow: 0 0 10px gray, 0 0 20px #006400; /* Gray and Green glow */
 }
 
 .portfolio-grid {
@@ -71,12 +71,12 @@ body {
   border-radius: 10px;
   padding: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 0 10px #1a1a1a, 0 0 20px #2d004d; /* Subtle black and purple shadows */
+  box-shadow: 0 0 10px gray, 0 0 20px #2d004d; /* Subtle gray and purple shadows */
 }
 
 .portfolio-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 20px #8b008b, 0 0 30px #dda0dd; /* Purple hover shadow */
+  box-shadow: 0 0 20px #006400, 0 0 30px #32cd32; /* Green hover shadow */
 }
 
 .portfolio-item img {
@@ -88,13 +88,19 @@ body {
   margin-top: 15px;
   color: #fff;
   font-size: 1.2rem;
-  text-shadow: 0 0 5px #6a0dad, 0 0 10px #8b008b; /* Purple glow */
+  text-shadow: 0 0 5px gray, 0 0 10px #006400; /* Gray and Green shadows */
+}
+
+form {
+  max-width: 600px; /* Restrict width of the contact form */
+  margin: 0 auto;
 }
 
 form input,
 form textarea,
 form button {
   width: 100%;
+  max-width: 100%; /* Keep within the restricted form width */
   padding: 12px;
   margin: 10px 0;
   border: none;
@@ -102,20 +108,24 @@ form button {
   background: #0f0f2d;
   color: #fff;
   font-size: 1rem;
-  text-shadow: 0 0 5px gray, 0 0 8px #6a0dad; /* Gray and Purple shadows */
+  text-shadow: 0 0 5px gray, 0 0 8px #006400; /* Gray and Green shadows */
   box-shadow: 0 0 8px #000, 0 0 10px #2d004d; /* Subtle black and purple shadows */
 }
 
+form textarea {
+  resize: vertical; /* Allow resizing only vertically */
+}
+
 form button {
-  background: linear-gradient(135deg, #6a0dad, #dda0dd); /* Purple gradient */
+  background: linear-gradient(135deg, #006400, #32cd32); /* Green gradient */
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s, box-shadow 0.3s;
 }
 
 form button:hover {
-  background: linear-gradient(135deg, #dda0dd, #6a0dad); /* Reverse purple gradient */
-  box-shadow: 0 0 12px #8b008b, 0 0 20px #dda0dd; /* Stronger purple hover shadow */
+  background: linear-gradient(135deg, #32cd32, #006400); /* Reverse green gradient */
+  box-shadow: 0 0 12px #006400, 0 0 20px #32cd32; /* Stronger green hover shadow */
 }
 
 .footer {
