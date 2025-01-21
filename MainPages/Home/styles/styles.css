@@ -1,0 +1,132 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #000, #2d004d); /* Black to Deep Purple */
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.header {
+  text-align: center;
+  padding: 60px 20px; /* Increased padding for emphasis */
+  color: #fff;
+  text-shadow: 0 0 10px #6a0dad, 0 0 20px #6a0dad, 0 0 30px #8b008b; /* Purple glow */
+}
+
+.header h1 {
+  font-size: 4rem;
+  margin: 0;
+  text-shadow: 0 0 15px #6a0dad, 0 0 25px #8b008b, 0 0 40px #9400d3; /* Glowing effect for h1 */
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #aaa;
+  text-shadow: 0 0 8px #6a0dad, 0 0 15px #8b008b; /* Subtle purple glow */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: transparent; /* No separate background */
+  padding: 15px 0;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px #6a0dad, 0 0 10px #9400d3; /* Purple glow */
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.navbar a:hover {
+  color: #dda0dd; /* Light purple hover */
+  text-shadow: 0 0 12px #8b008b, 0 0 20px #dda0dd; /* Stronger purple glow */
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #6a0dad, 0 0 20px #8b008b; /* Glowing purple effect */
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.portfolio-item {
+  background: #1a1a40;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px #1a1a1a, 0 0 20px #2d004d; /* Subtle black and purple shadows */
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #8b008b, 0 0 30px #dda0dd; /* Purple hover shadow */
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.portfolio-item h3 {
+  margin-top: 15px;
+  color: #fff;
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px #6a0dad, 0 0 10px #8b008b; /* Purple glow */
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background: #0f0f2d;
+  color: #fff;
+  font-size: 1rem;
+  text-shadow: 0 0 5px gray, 0 0 8px #6a0dad; /* Gray and Purple shadows */
+  box-shadow: 0 0 8px #000, 0 0 10px #2d004d; /* Subtle black and purple shadows */
+}
+
+form button {
+  background: linear-gradient(135deg, #6a0dad, #dda0dd); /* Purple gradient */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+form button:hover {
+  background: linear-gradient(135deg, #dda0dd, #6a0dad); /* Reverse purple gradient */
+  box-shadow: 0 0 12px #8b008b, 0 0 20px #dda0dd; /* Stronger purple hover shadow */
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: transparent; /* Part of the main gradient */
+  color: #888;
+  font-size: 0.9rem;
+  text-shadow: 0 0 3px gray; /* Subtle gray shadow */
+}
+
+.footer p {
+  margin: 0;
+}
