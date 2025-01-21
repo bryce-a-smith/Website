@@ -108,7 +108,7 @@ form button {
   margin: 10px 0;
   border: none;
   border-radius: 5px;
-  background: #012724;
+  background: #003634;
   color: #fff;
   font-size: 1rem;
   text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
@@ -127,7 +127,7 @@ form button {
 }
 
 form button:hover {
-  background: linear-gradient(135deg, #fff, #288a85); /* Teal and White Glow */
+  background: linear-gradient(135deg, #288a85, #fff); /* Teal and White Glow */
   box-shadow: 0 0 12px #fff, 0 0 20px #288a85; /* Teal and White Glow */
 }
 
