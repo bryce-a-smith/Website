@@ -13,7 +13,7 @@ body {
 .header {
   text-align: center;
   padding: 60px 20px; /* Increased padding for emphasis */
-  color: #fff;
+  color: #e7faf6; /* Extremely Light Teal */
   text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
 }
 
@@ -26,7 +26,7 @@ body {
 .header p {
   font-size: 1.2rem;
   margin-top: 10px;
-  color: #aaa;
+  color: #bdd3ce; /* Grayish Super Light Teal */
   text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
 }
 
@@ -38,17 +38,18 @@ body {
 }
 
 .navbar a {
-  color: #fff;
+  color: #a2c4bd; /* Very Light Teal */
   text-decoration: none;
   margin: 0 20px;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
   transition: color 0.3s, text-shadow 0.3s;
 }
 
 .navbar a:hover {
-  text-shadow: 0 0 12px #288a85, 0 0 20px #fff; /* Teal and White glow */
+  color: #fff; /* White on hover */
+  text-shadow: 0 0 12px #3fdab8, 0 0 20px #fff; /* Teal and White glow */
 }
 
 /* Side Panel */
@@ -71,17 +72,30 @@ body {
   padding: 15px 30px;
   text-decoration: none;
   font-size: 1.2rem;
-  color: rgba(0, 128, 128, 0.4); /* Teal color */
+  font-weight: 500;
+  /*
+  color: #8bafa8;
+  */
+  color: #a2c4bd;
   display: block;
   transition: 0.3s;
-  text-shadow: 0 0 10px #288a85, 0 0 20px #003634;
+  text-shadow: 0 0 10px #288a85, 0 0 20px #3fdab8;
   margin-top: 10px; /* Space between individual links */
+
+  /* Text Outline
+  -webkit-text-stroke: 0.1px white; /* Thin white outline around text
+  /*
+  text-stroke: 1px white; /* Non-webkit fallback
+  */
 }
 
 /* Side Panel Link Hover */
 .side-panel a:hover {
   color: #fff; /* White on hover */
+  text-shadow: 0 0 12px #3fdab8, 0 0 20px #fff; /* Lighter Teal and White glow */
+  /*
   text-shadow: 0 0 10px #fff, 0 0 20px #288a85;
+  */
 }
 
 /* Toggle Button */
