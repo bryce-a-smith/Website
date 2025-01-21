@@ -51,6 +51,73 @@ body {
   text-shadow: 0 0 12px #288a85, 0 0 20px #fff; /* Teal and White glow */
 }
 
+/* Side Panel */
+.side-panel {
+  height: 100%; /* Full height */
+  width: 0; /* Collapsed by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  transition: 0.5s; /* Smooth open/close transition */
+  box-shadow: 0 0 10px #288a85; /* Teal shadow */
+  z-index: 1000; /* Ensure it's on top of other elements */
+  padding-top: 80px; /* Adds space below the toggle button */
+}
+
+/* Links Inside Side Panel */
+.side-panel a {
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: rgba(0, 128, 128, 0.4); /* Teal color */
+  display: block;
+  transition: 0.3s;
+  text-shadow: 0 0 10px #288a85, 0 0 20px #003634;
+  margin-top: 10px; /* Space between individual links */
+}
+
+/* Side Panel Link Hover */
+.side-panel a:hover {
+  color: #fff; /* White on hover */
+  text-shadow: 0 0 10px #fff, 0 0 20px #288a85;
+}
+
+/* Toggle Button */
+#toggleBtn {
+  position: fixed; /* Fixed outside the side panel */
+  top: 10px;
+  left: 10px; /* Start on the left */
+  font-size: 1.5rem;
+  background-color: #003634;
+  color: rgba(0, 128, 128, 0.4);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-shadow: 0 0 10px #288a85;
+  border-radius: 5px;
+  transition: 0.3s;
+  z-index: 1001; /* Ensure it's above the side panel */
+}
+
+/* Toggle Button Hover */
+#toggleBtn:hover {
+  background-color: rgba(0, 128, 128, 0.4);
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #288a85;
+}
+
+/* Side Panel Expanded */
+.side-panel.active {
+  width: 250px; /* Expanded width */
+}
+
+/* Toggle Button Inside Expanded Panel */
+.side-panel.active + #toggleBtn {
+  left: 220px; /* Move toggle button to the right edge */
+}
+
 .section {
   padding: 60px 20px;
   text-align: center;
