@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vacation Resort</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+  </head>
+  <body class="bg-dark">
+    <header class="bg-dark-subtle border-bottom border-dark">
+      <div class="container">
+        <h2 class="text-dark-emphasis">Vacation Resort</h2>
+        <nav class="navbar">
+          <a class="btn btn-outline-dark" href="index.html">Home</a>
+          <a class="btn btn-outline-dark" href="overnight-stay.html">Overnight Stay</a>
+          <a class="btn btn-outline-dark" href="dining.html">Dining</a>
+          <a class="btn btn-outline-dark" href="rent-a-car.html">Rental Car</a>
+          <a class="btn btn-outline-dark" href="activities.html">Activities</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <fieldset class="bg-dark-subtle px-5 py-4 my-4">
+          <div class="row">
+            <div class="col text-center">
+              <h3>Overnight Stay Cost Estimator</h3>
+              <br />
+            </div>
+          </div>
+          <form id="overnight-cost-estimator">
+            <div class="row">
+              <table>
+                <tr>
+                  <td>
+                    <label for="full-name-input">Name: </label>
+                  </td>
+                  <td>
+                    <input type="text" id="full-name-input" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <label for="email-input">Email: </label>
+                  </td>
+                  <td>
+                    <input type="text" id="email-input" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <label for="check-in-date-input">Check-in Date: </label>
+                  </td>
+                  <td>
+                    <input type="date" id="check-in-date-input" />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <label for="number-of-days-input">Number of Days: </label>
+                  </td>
+                  <td>
+                    <input type="text" id="number-of-days-input" />
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <br />
+            <div class="row">
+              <div class="radio-button-group">
+                <p>Select Room Type:</p>
+
+                <input type="radio" name="room-type-radio" id="queen-radio" />
+                <label for="queen-radio">Queen</label>
+
+                <input type="radio" name="room-type-radio" id="king-radio" />
+                <label for="king-radio">King</label>
+
+                <input type="radio" name="room-type-radio" id="two-bedroom-suite-radio" />
+                <label for="two-bedroom-suite-radio">2-Bedroom Suit</label>
+              </div>
+            </div>
+            <br />
+
+            <div class="row">
+              <table>
+                <tr>
+                  <td>
+                    <label for="number-of-adults-input">Number of Adults: </label>
+                  </td>
+                  <td>
+                    <input type="text" id="number-of-adults-input" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="number-of-children-input">Number of Children: </label>
+                  </td>
+                  <td>
+                    <input type="text" id="number-of-children-input" />
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <br />
+            <div class="row">
+              <div class="radio-button-group">
+                <p>Discounts</p>
+
+                <input type="radio" name="discount-radio" id="none-radio" />
+                <label for="none-radio">None</label>
+
+                <input type="radio" name="discount-radio" id="aaa-radio" />
+                <label for="aaa-radio">AAA</label>
+
+                <input type="radio" name="discount-radio" id="senior-radio" />
+                <label for="senior-radio">Senior</label>
+
+                <input type="radio" name="discount-radio" id="military-radio" />
+                <label for="military-radio">Military</label>
+              </div>
+            </div>
+          </form>
+        </fieldset>
+      </div>
+    </main>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

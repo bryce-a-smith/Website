@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental</title>
+    <style>
+      .field {
+        margin: 2rem 5rem 2rem 5rem;
+      }
+      .row {
+        padding: 0.25rem;
+      }
+      .group {
+        padding: 0.15rem;
+      }
+      .row-cost {
+        align-items: center;
+      }
+      table {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      td {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <fieldset class="field">
+          <div class="row">
+            <h2>ACME Car Rental</h2>
+          </div>
+          <div class="group">
+            <div class="row">
+              <label for="pickup-date-input">Pickup date: </label>
+              <input id="pickup-date-input" type="text" />
+            </div>
+
+            <div class="row">
+              <label for="number-of-days-input">Number of days: </label>
+              <input id="number-of-days-input" type="text" />
+            </div>
+          </div>
+          <div class="group">
+            <div class="row">
+              <p>Options</p>
+            </div>
+            <div class="row">
+              <input type="checkbox" id="toll-tag-checkbox" />
+              <label for="toll-tag-checkbox">Electronic Toll Tag ($3.95/day)</label>
+            </div>
+            <div class="row">
+              <input type="checkbox" id="gps-checkbox" />
+              <label for="gps-checkbox">GPS ($2.95/day)</label>
+            </div>
+            <div class="row">
+              <input type="checkbox" id="roadside-checkbox" />
+              <label for="roadside-checkbox">Roadside Assistance ($2.95/day)</label>
+            </div>
+          </div>
+          <div class="group">
+            <div class="row">
+              <p>Under 25</p>
+            </div>
+            <div class="row">
+              <input type="radio" name="under-25-radio" id="no-radio" />
+              <label for="no-radio">No</label>
+
+              <input type="radio" name="under-25-radio" id="yes-radio" />
+              <label for="yes-radio">Yes</label>
+            </div>
+          </div>
+          <div class="group">
+            <div class="row">
+              <button id="calculate-total-cost-button">Estimate Total Cost</button>
+            </div>
+          </div>
+          <div class="cost-breakdown-group">
+            <div class="row-cost">
+              <table>
+                <tr>
+                  <td>Car rental:</td>
+                  <td id="car-rental-amount-paragraph"></td>
+                </tr>
+
+                <tr>
+                  <td>Options:</td>
+                  <td id="options-amount-paragraph"></td>
+                </tr>
+
+                <tr>
+                  <td>Under 25 surcharge:</td>
+                  <td id="under-25-amount-paragraph"></td>
+                </tr>
+                <tr>
+                  <td>Total due:</td>
+                  <td id="total-due-amount-paragraph"></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <script>
+        "use strict";
+
+        function init() {
+          //get html elements
+          //inputs
+          //textbox inputs
+          const pickupDateInput = document.getElementById("pickup-date-input");
+          const numberOfDaysInput = document.getElementById("number-of-days-input");
+          //checkbox inputs
+          const tollTagCheckbox = document.getElementById("toll-tag-checkbox");
+          const gpsCheckbox = document.getElementById("gps-checkbox");
+          const roadsideCheckbox = document.getElementById("roadside-checkbox");
+          //radio inputs
+          const noRadio = document.getElementById("no-radio");
+          const yesRadio = document.getElementById("yes-radio");
+          //buttons
+          const calculateTotalCostButton = document.getElementById("calculate-total-cost-button");
+          //outputs
+          const carRentalAmountP = document.getElementById("car-rental-amount-paragraph");
+          const optionsAmountP = document.getElementById("options-amount-paragraph");
+          const under25AmountP = document.getElementById("under-25-amount-paragraph");
+          const totalDueAmountP = document.getElementById("total-due-amount-paragraph");
+
+          //write functions
+          function calculateBasicRentalCost(numOfDays) {
+            return numOfDays * 29.99;
+          }
+
+          function calculateOptionsCost(numOfDays) {
+            let optionsCost = 0;
+
+            if (tollTagCheckbox.checked) {
+              optionsCost += 3.95 * numOfDays;
+            }
+            if (gpsCheckbox.checked) {
+              optionsCost += 2.95 * numOfDays;
+            }
+            if (roadsideCheckbox.checked) {
+              optionsCost += 2.95 * numOfDays;
+            }
+
+            return optionsCost;
+          }
+
+          function calculateAgeSurcharge(subtotal) {
+            if (noRadio.checked) {
+              return 0;
+            } else if (yesRadio.checked) {
+              return subtotal * 0.3;
+            } else {
+              alert("Please select age.");
+              return -1;
+            }
+          }
+
+          //write functions for event handlers
+          function displayCost() {
+            const numberOfDays = Number(numberOfDaysInput.value);
+
+            const carRentalSubtotal = calculateBasicRentalCost(numberOfDays);
+            const optionsSubtotal = calculateOptionsCost(numberOfDays);
+            const surchargeSubtotal = calculateAgeSurcharge(carRentalSubtotal);
+
+            if (surchargeSubtotal == -1) {
+              return;
+            }
+
+            const totalCost = carRentalSubtotal + optionsSubtotal + surchargeSubtotal;
+
+            //display
+            carRentalAmountP.innerText = `$${carRentalSubtotal.toFixed(2)}`;
+            optionsAmountP.innerText = `$${optionsSubtotal.toFixed(2)}`;
+            under25AmountP.innerText = `$${surchargeSubtotal.toFixed(2)}`;
+            totalDueAmountP.innerText = `$${totalCost.toFixed(2)}`;
+          }
+
+          //wire-up events to functions
+          if (calculateTotalCostButton) {
+            calculateTotalCostButton.onclick = displayCost;
+          }
+        }
+
+        window.onload = init;
+      </script>
+    </main>
+  </body>
+</html>

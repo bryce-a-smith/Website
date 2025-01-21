@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css"> -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-dark">
+    <header class="bg-dark-subtle border-bottom border-dark">
+      <div class="container">
+        <h2 class="text-dark-emphasis">Visitor's Bureau</h2>
+        <nav class="navbar">
+          <a class="btn btn-outline-dark" href="index.html">Home</a>
+          <a class="btn btn-outline-dark" href="activitiesPage.html">Activities</a>
+          <a class="btn btn-outline-dark" href="hikingPage.html">Hiking</a>
+          <a class="btn btn-outline-dark" href="aboutTheArea.html">About</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <fieldset class="bg-dark-subtle px-5 py-4">
+          <form>
+            <h1>Activities</h1>
+            <div class="row">
+              <div class="col-md-6 form-col">
+                <label for="category-select">Category</label>
+                <select id="category-select">
+                  <option value="">Select Category...</option>
+                </select>
+                <label for="name-select">Activities</label>
+                <select id="name-select">
+                  <option value="">Select Activity...</option>
+                </select>
+              </div>
+              <div class="col-md-6 form-col">
+                <p id="display-paragraph" class="activity-p"></p>
+              </div>
+            </div>
+          </form>
+          <form id="buy-tickets-form" style="display: none">
+            <div class="row">
+              <div class="col-9 form-col">
+                <label for="name-input">Name: </label>
+                <input id="name-input" type="text" />
+
+                <label for="email-input">Email: </label>
+                <input id="email-input" type="text" />
+
+                <label for="card-number-input">Credit Card: </label>
+                <input id="card-number-input" type="text" />
+
+                <button id="buy-tickets-button" class="btn-dark" type="button">Buy Tickets</button>
+              </div>
+              <div class="col-3 form-col">
+                <label for="number-of-tickets-select">Tickets</label>
+                <select id="number-of-tickets-select">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+
+                <label for="price-output">Total: </label>
+                <input id="price-output" type="text" readonly />
+              </div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col form-col">
+              <p id="check-out-paragraph" class="activity-p"></p>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </main>
+    <script src="ActivitiesPage/activities.js"></script>
+  </body>
+</html>

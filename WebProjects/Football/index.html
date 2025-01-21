@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        max-width: 10rem;
+      }
+      img {
+        width: 20rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form>
+        <label for="football-teams-select">Football Teams</label>
+        <select name="football-teams-list" id="football-teams-select">
+          <option value="">Select...</option>
+        </select>
+        <button id="display-info-button">Display Info</button>
+        <p id="display-paragraph"></p>
+        <img id="team-image" src="" alt="">
+      </form>
+    </main>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

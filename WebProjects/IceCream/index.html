@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Cream</title>
+    <style>
+      .container {
+        text-align: center;
+      }
+      .field-lg {
+        margin: 1rem 5rem 1rem 5rem;
+      }
+      .row {
+        padding: 0.25rem;
+      }
+      .field-sm {
+        margin: 0 2rem 0.25rem 2rem;
+      }
+      #submit-order-button {
+        margin: 1.5rem 0 1.5rem 0;
+      }
+      .row-cost {
+        align-items: center;
+      }
+      table {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      td {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <h1>Ice Cream</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <fieldset class="field-lg">
+          <div class="row">
+            <label for="number-of-scoops-input">Number of scoops </label>
+            <input type="text" id="number-of-scoops-input" />
+          </div>
+          <div class="row" id="toggle-section">
+            <input type="radio" name="cone-or-cup-radio" id="cone-radio" />
+            <label for="cone-radio">Cone</label>
+
+            <input type="radio" name="cone-or-cup-radio" id="cup-radio" />
+            <label for="cup-radio">Cup</label>
+          </div>
+          <div class="row" id="toppings-section">
+            <p>Toppings</p>
+            <fieldset class="field-sm">
+              <input type="checkbox" id="sprinkles-checkbox" />
+              <label for="sprinkles-checkbox">Sprinkles ($0.50)</label>
+
+              <input type="checkbox" id="whipped-cream-checkbox" />
+              <label for="whipped-cream-checkbox">Whipped Cream ($0.25)</label>
+
+              <input type="checkbox" id="hot-fudge-checkbox" />
+              <label for="hot-fudge-checkbox">Hot Fudge ($1.25)</label>
+
+              <input type="checkbox" id="cherry-checkbox" />
+              <label for="cherry-checkbox">Cherry ($0.25)</label>
+            </fieldset>
+          </div>
+          <div class="row">
+            <button id="submit-order-button">Submit Order</button>
+          </div>
+          <div class="row-cost">
+            <table>
+              <tr>
+                <td>Base Price:</td>
+                <td id="base-price-amount"></td>
+              </tr>
+              <tr>
+                <td>Tax:</td>
+                <td id="tax-amount"></td>
+              </tr>
+              <tr>
+                <td>Total Due:</td>
+                <td id="total-due-amount"></td>
+              </tr>
+            </table>
+            <p></p>
+          </div>
+        </fieldset>
+      </div>
+      <script src="index.js"></script>
+    </main>
+  </body>
+</html>

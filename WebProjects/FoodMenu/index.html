@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Menu</title>
+    <style>
+      fieldset {
+        max-width: 25rem;
+        margin: auto;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        max-width: 15rem;
+        padding: 0.5rem;
+      }
+      select {
+        padding: 0.25rem;
+        margin: .25rem 0 .25rem 0;
+      }
+      label {
+        margin: .25rem 0 .25rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <fieldset>
+        <form>
+          <h1>Food Menu</h1>
+          <label for="category-select">Category of Menu Items</label>
+          <select id="category-select">
+            <option value="">Select Category...</option>
+            <option value="drinks">Drinks</option>
+            <option value="entrees">Entrees</option>
+            <option value="desserts">Desserts</option>
+          </select>
+          <label for="item-select">Menu Items</label>
+          <select id="item-select">
+            <option value="">Select Item...</option>
+          </select>
+        </form>
+      </fieldset>
+    </main>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
