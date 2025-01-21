@@ -20,14 +20,14 @@ body {
 .header h1 {
   font-size: 4rem;
   margin: 0;
-  text-shadow: 0 0 15px gray, 0 0 25px #006400; /* Gray and Green glowing effect for h1 */
+  text-shadow: 0 0 15px #4b0082, 0 0 25px #8a2be2; /* Bluish-purple glow for the main title */
 }
 
 .header p {
   font-size: 1.2rem;
   margin-top: 10px;
   color: #aaa;
-  text-shadow: 0 0 8px gray, 0 0 15px #006400; /* Subtle gray and green glow */
+  text-shadow: 0 0 8px #4b0082, 0 0 15px #8a2be2; /* Subtle bluish-purple glow */
 }
 
 .navbar {
@@ -48,8 +48,8 @@ body {
 }
 
 .navbar a:hover {
-  color: #32cd32; /* Light green hover */
-  text-shadow: 0 0 12px #006400, 0 0 20px #32cd32; /* Strong green glow on hover */
+  color: #8a2be2; /* Bluish-purple hover color */
+  text-shadow: 0 0 12px #4b0082, 0 0 20px #8a2be2; /* Deep bluish-purple glow */
 }
 
 .section {
@@ -60,7 +60,7 @@ body {
 .section h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  text-shadow: 0 0 10px gray, 0 0 20px #006400; /* Gray and Green glow */
+  text-shadow: 0 0 12px #4b0082, 0 0 20px #8a2be2; /* Bluish-purple glow */
 }
 
 .portfolio-grid {
@@ -92,12 +92,18 @@ body {
   margin-top: 15px;
   color: #fff;
   font-size: 1.2rem;
-  text-shadow: 0 0 5px gray, 0 0 10px #006400; /* Gray and Green shadows */
+  text-shadow: 0 0 5px #4b0082, 0 0 10px #8a2be2; /* Bluish-purple glow */
 }
 
 form {
   max-width: 600px; /* Restrict width of the contact form */
   margin: 0 auto;
+}
+
+form label {
+  font-weight: bold;
+  color: #8a2be2; /* Bluish-purple text */
+  text-shadow: 0 0 8px #4b0082, 0 0 15px #8a2be2; /* Subtle bluish-purple glow */
 }
 
 form input,
@@ -128,8 +134,8 @@ form button {
 }
 
 form button:hover {
-  background: linear-gradient(135deg, #32cd32, #006400); /* Reverse green gradient */
-  box-shadow: 0 0 12px #006400, 0 0 20px #32cd32; /* Stronger green hover shadow */
+  background: linear-gradient(135deg, #4b0082, #8a2be2); /* Bluish-purple gradient */
+  box-shadow: 0 0 12px #4b0082, 0 0 20px #8a2be2; /* Strong bluish-purple hover shadow */
 }
 
 .footer {
@@ -143,4 +149,6 @@ form button:hover {
 
 .footer p {
   margin: 0;
+  color: #8a2be2; /* Bluish-purple footer text */
+  text-shadow: 0 0 8px #4b0082, 0 0 15px #8a2be2; /* Subtle bluish-purple glow */
 }
