@@ -99,6 +99,15 @@ form {
   margin: 0 auto;
 }
 
+form label {
+  display: block; /* Ensures labels take up the full width */
+  text-align: left; /* Aligns the text to the left */
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
+  margin-bottom: 5px; /* Adds spacing between label and input field */
+}
+
 form input,
 form textarea,
 form button {
