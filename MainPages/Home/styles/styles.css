@@ -14,20 +14,20 @@ body {
   text-align: center;
   padding: 60px 20px; /* Increased padding for emphasis */
   color: #fff;
-  text-shadow: 0 0 10px gray, 0 0 20px #006400; /* Gray and Green shadows */
+  text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
 }
 
 .header h1 {
   font-size: 4rem;
   margin: 0;
-  text-shadow: 0 0 15px #4b0082, 0 0 25px #8a2be2; /* Bluish-purple glow for the main title */
+  text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
 }
 
 .header p {
   font-size: 1.2rem;
   margin-top: 10px;
   color: #aaa;
-  text-shadow: 0 0 8px #4b0082, 0 0 15px #8a2be2; /* Subtle bluish-purple glow */
+  text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
 }
 
 .navbar {
@@ -43,13 +43,12 @@ body {
   margin: 0 20px;
   font-size: 1.1rem;
   font-weight: bold;
-  text-shadow: 0 0 5px gray, 0 0 10px #006400; /* Gray and Green shadows */
+  text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
   transition: color 0.3s, text-shadow 0.3s;
 }
 
 .navbar a:hover {
-  color: #8a2be2; /* Bluish-purple hover color */
-  text-shadow: 0 0 12px #4b0082, 0 0 20px #8a2be2; /* Deep bluish-purple glow */
+  text-shadow: 0 0 12px #288a85, 0 0 20px #fff; /* Teal and White glow */
 }
 
 .section {
@@ -60,7 +59,7 @@ body {
 .section h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  text-shadow: 0 0 12px #4b0082, 0 0 20px #8a2be2; /* Bluish-purple glow */
+  text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
 }
 
 .portfolio-grid {
@@ -71,7 +70,7 @@ body {
 }
 
 .portfolio-item {
-  background: #1a1a40;
+  background: #012724;
   border-radius: 10px;
   padding: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -80,7 +79,7 @@ body {
 
 .portfolio-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 20px #006400, 0 0 30px #32cd32; /* Green hover shadow */
+  box-shadow: 0 0 12px #288a85, 0 0 20px #fff; /* Teal and White glow */
 }
 
 .portfolio-item img {
@@ -92,18 +91,12 @@ body {
   margin-top: 15px;
   color: #fff;
   font-size: 1.2rem;
-  text-shadow: 0 0 5px #4b0082, 0 0 10px #8a2be2; /* Bluish-purple glow */
+  text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
 }
 
 form {
   max-width: 600px; /* Restrict width of the contact form */
   margin: 0 auto;
-}
-
-form label {
-  font-weight: bold;
-  color: #8a2be2; /* Bluish-purple text */
-  text-shadow: 0 0 8px #4b0082, 0 0 15px #8a2be2; /* Subtle bluish-purple glow */
 }
 
 form input,
@@ -115,11 +108,11 @@ form button {
   margin: 10px 0;
   border: none;
   border-radius: 5px;
-  background: #0f0f2d;
+  background: #012724;
   color: #fff;
   font-size: 1rem;
-  text-shadow: 0 0 5px gray, 0 0 8px #006400; /* Gray and Green shadows */
-  box-shadow: 0 0 8px #000, 0 0 10px #2d004d; /* Subtle black and purple shadows */
+  text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
+  box-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
 }
 
 form textarea {
@@ -127,15 +120,15 @@ form textarea {
 }
 
 form button {
-  background: linear-gradient(135deg, #006400, #32cd32); /* Green gradient */
+  background: #012724; /* Teal */
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s, box-shadow 0.3s;
 }
 
 form button:hover {
-  background: linear-gradient(135deg, #4b0082, #8a2be2); /* Bluish-purple gradient */
-  box-shadow: 0 0 12px #4b0082, 0 0 20px #8a2be2; /* Strong bluish-purple hover shadow */
+  background: linear-gradient(135deg, #fff, #288a85); /* Teal and White Glow */
+  box-shadow: 0 0 12px #fff, 0 0 20px #288a85; /* Teal and White Glow */
 }
 
 .footer {
@@ -149,6 +142,8 @@ form button:hover {
 
 .footer p {
   margin: 0;
-  color: #8a2be2; /* Bluish-purple footer text */
-  text-shadow: 0 0 8px #4b0082, 0 0 15px #8a2be2; /* Subtle bluish-purple glow */
+  text-align: center;
+  padding: 60px 20px; /* Increased padding for emphasis */
+  color: #fff;
+  text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
 }
