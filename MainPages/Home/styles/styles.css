@@ -237,3 +237,99 @@ form button:hover {
   color: #fff;
   text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
 }
+
+/* Default styles (large screens) are already defined above */
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 3rem; /* Decrease header font size */
+  }
+
+  .navbar a {
+    font-size: 1rem; /* Reduce navbar link font size */
+    margin: 0 10px; /* Reduce spacing between links */
+  }
+
+  .section {
+    padding: 40px 15px; /* Reduce section padding */
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller grid items */
+    gap: 15px; /* Reduce gap between portfolio items */
+  }
+
+  .portfolio-item h3 {
+    font-size: 1rem; /* Adjust portfolio item title font size */
+  }
+
+  form {
+    max-width: 500px; /* Reduce form width */
+    padding: 0 15px; /* Add padding for smaller screens */
+  }
+
+  form button {
+    padding: 10px; /* Reduce button size */
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 2.5rem; /* Further reduce header font size */
+  }
+
+  .header p {
+    font-size: 1rem; /* Reduce subheading font size */
+  }
+
+  .navbar {
+    flex-direction: column; /* Stack navbar links vertically */
+    align-items: center;
+  }
+
+  .navbar a {
+    margin: 10px 0; /* Add vertical spacing between links */
+    font-size: 0.9rem; /* Reduce font size */
+  }
+
+  .side-panel {
+    padding-top: 60px; /* Adjust padding to match smaller screens */
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Single-column layout for smaller screens */
+  }
+
+  form {
+    max-width: 100%; /* Use full screen width for the form */
+  }
+
+  form input,
+  form textarea,
+  form button {
+    font-size: 0.9rem; /* Adjust form element font sizes */
+    padding: 10px; /* Reduce padding */
+  }
+}
+
+/* Extra large screens (desktops, 1440px or higher) */
+@media (min-width: 1440px) {
+  .header h1 {
+    font-size: 5rem; /* Increase header font size */
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Larger grid items */
+  }
+
+  form {
+    max-width: 800px; /* Increase form width */
+  }
+
+  .navbar a {
+    font-size: 1.5rem; /* Increase navbar link font size */
+    margin: 0 30px; /* Add more spacing */
+  }
+}
