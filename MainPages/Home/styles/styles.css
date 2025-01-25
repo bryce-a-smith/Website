@@ -143,6 +143,33 @@ body {
   text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
 }
 
+/* title of table */
+.chart {
+  display: flex; /* Turn the  into a flex container */
+  justify-content: center; /* Centers the content horizontally */
+  height: 100%; /* Ensure the wrapper takes up the full height of the table header cell */
+  text-align: center; /* Align text inside the wrapper */
+}
+
+/* title of table */
+.th-wrapper {
+  display: flex; /* Turn the wrapper into a flex container */
+  justify-content: center; /* Centers the content horizontally */
+  height: 100%; /* Ensure the wrapper takes up the full height of the table header cell */
+  text-align: center; /* Align text inside the wrapper */
+}
+
+.th-wrapper h3 {
+  color: #a2c4bd; /* Very Light Teal */
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -169,10 +196,29 @@ body {
 }
 
 .portfolio-item h3 {
-  margin-top: 15px;
-  color: #fff;
-  font-size: 1.2rem;
+  color: #a2c4bd; /* Very Light Teal */
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
   text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.portfolio-item a {
+  color: #a2c4bd; /* Very Light Teal */
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.portfolio-item a:hover,
+h3:hover {
+  color: #fff; /* White on hover */
+  text-shadow: 0 0 12px #3fdab8, 0 0 20px #fff; /* Teal and White glow */
 }
 
 form {
