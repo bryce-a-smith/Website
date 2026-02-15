@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AldenBryce.io</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/ioStyles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <section id="top" class="top">
+        <h1>Alden Bryce</h1>
+        <p>Web & Application Developer</p>
+      </section>
+    </header>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a class="disabled">Portfolio</a>
+      <a href="links.html">Links</a>
+      <a href="contact.html" class="current-page">Contact</a>
+    </nav>
+    <!-- Toggle button is outside of the side panel initially -->
+    <button class="toggle-btn" id="toggleBtn">☰</button>
+
+    <div class="side-panel" id="sidePanel">
+      <a href="index.html">Home</a>
+      <a class="disabled">Portfolio</a>
+      <a href="links.html">Links</a>
+      <a href="contact.html" class="current-page">Contact</a>
+    </div>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+    <footer class="footer">
+      <p>&copy; 2025 AldenBryce. All rights reserved.</p>
+    </footer>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

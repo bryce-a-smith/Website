@@ -1,0 +1,37 @@
+a.disabled {
+  color: #33413e; /* Gray text */
+  text-shadow: 0 0 5px #33413e, 0 0 10px #288a85; /* Gray and Teal shadows */
+  text-decoration: line-through;
+}
+
+a.disabled:hover {
+  color: #33413e; /* black on hover */
+  text-shadow: 0 0 5px #33413e, 0 0 10px #288a85; /* Gray and Teal shadows */
+
+  cursor: default;
+}
+
+div.about,
+div.links {
+  max-width: 600px; /* Restrict width of the contact form */
+  margin: 0 auto;
+}
+
+.section p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #bdd3ce; /* Grayish Super Light Teal */
+  text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
+}
+
+.section h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
+}
+
+.section h3 {
+  font-size: 1.7rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 5px gray, 0 0 10px #288a85; /* Gray and Teal shadows */
+}
