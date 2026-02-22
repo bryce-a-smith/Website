@@ -61,6 +61,15 @@ body {
   color: #2563eb;
 }
 
+.unstyled-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
 /* HERO */
 .hero {
   padding: 80px 0 50px;
