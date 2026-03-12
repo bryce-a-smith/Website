@@ -1,0 +1,22 @@
+[
+  {
+    "id": "INC-001",
+    "title": "Multi-environment outage — domain ownership conflict",
+    "status": "Resolved",
+    "severity": "High",
+    "startTime": "2026-03-12T14:00:00",
+    "resolvedTime": "2026-03-12T19:00:00",
+    "downtimeMinutes": 300,
+    "environments": ["aldenbryce.com", "dev.aldenbryce.com", "qa.aldenbryce.com"],
+    "rootCause": "AWS Amplify domain ownership conflict combined with region discrepancy and missing IAM service role.",
+    "summary": "During deployment of a new monitoring pipeline project, configuring the root domain on a second Amplify app transferred internal CloudFront ownership away from the main site, taking down all environments. The original app was located in a different AWS region than where recovery was being attempted, extending the investigation window. A missing IAM service role was a secondary blocker. Resolved by identifying the original app in us-east-1, recreating the IAM role, and restoring domain configuration.",
+    "lessonsLearned": [
+      "Only one Amplify app can own a root domain — all subdomains must be configured under the same app",
+      "Always verify AWS console region before creating or modifying resources",
+      "IAM service roles prefixed with AWS are infrastructure-critical and should not be removed",
+      "Remove domain configuration before deleting an Amplify app to prevent orphaned CloudFront associations",
+      "Validate new domain configurations on isolated subdomains before touching a shared root domain"
+    ],
+    "portfolioWorthy": true
+  }
+]
