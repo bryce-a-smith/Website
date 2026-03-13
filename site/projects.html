@@ -46,24 +46,7 @@
 
     <!-- PROJECTS -->
 
-    <section id="projects" class="section">
-      <div class="container">
-        <h3>
-          <a href="index.html" class="project-link">AldenBryce.dev</a>
-        </h3>
-        <p>
-          A personal portfolio website built using HTML, CSS, and JavaScript. The project features a responsive design,
-          showcasing my background, projects, and contact information in a clean and user-friendly layout.
-        </p>
-        <p>
-          <a href="https://github.com/bryce-a-smith/Website/tree/main/site" target="_blank" class="project-link"
-            >GitHub Repo</a
-          >
-        </p>
-      </div>
-    </section>
-
-    <section id="projects" class="section alt">
+    <section class="section">
       <div class="container">
         <h3>
           <a href="https://status.aldenbryce.com/" target="_blank" class="project-link"
@@ -71,37 +54,41 @@
           >
         </h3>
         <p>
-          Multi-environment monitoring and alerting pipeline. UptimeRobot + Power Automate + GitHub Actions + AWS
-          Amplify. Live status page. Includes a real incident postmortem from a production outage during setup. (Still a
-          work in progress)
-          <br />
-          <strong>Stack:</strong> GitHub Actions · AWS Amplify · Route 53 · UptimeRobot · Power Automate · JavaScript
-          <br />
-          <br />
+          Designed and deployed a lightweight observability stack across six environments -- because if you're going to
+          talk about production reliability, your own infrastructure should demonstrate it. Automated health checks run
+          every five minutes via GitHub Actions cron, writing results to a dedicated data branch without triggering a
+          redeploy. The status page fetches live health data and per-branch last commit timestamps in parallel,
+          rendering independently so one failed request never blocks another.
         </p>
-        <p class="project-link toggle-link" id="monitoring-description-toggle">Read more</p>
-        <p style="display: none" id="monitoring-description-p">
-          <br />
-          Designed and deployed a lightweight observability stack for my personal infrastructure — because if you're
-          going to talk about production reliability, your own site should have monitoring. The pipeline covers three
-          environments (dev, qa, prod) with automated health checks every five minutes, webhook-driven alerting on
-          status changes, and a live status page that shows deployment state and last commit timestamp in real time.
-          <br />
-
-          Built on GitHub Actions, AWS Amplify, UptimeRobot, and Power Automate.
-          <br />
-          <br />
-          The more interesting part: setting it up caused a two-hour outage on
-          <a href="index.html" target="_blank">aldenbryce.com</a>
-          — a DNS conflict between two AWS Amplify apps claiming the same CloudFront distribution, compounded by a
-          missing IAM service role. I documented the full incident response from detection through root cause analysis
-          to resolution. That writeup lives at
-          <a href="incidents.html" target="_blank">/incidents</a> and is probably a more useful portfolio artifact than
-          the project itself.
+        <p class="text-sm text-muted">
+          Stack: GitHub Actions &middot; AWS Amplify &middot; AWS Route 53 &middot; AWS ACM &middot; CloudFront &middot;
+          JavaScript &middot; UptimeRobot
         </p>
         <p>
-          <br />
           <a href="https://github.com/bryce-a-smith/monitoring-pipeline" target="_blank" class="project-link"
+            >GitHub Repo</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h3>
+          <a href="incidents.html" class="project-link">Incident Log</a>
+        </h3>
+        <p>
+          Built a structured incident management workflow for personal infrastructure. INC-001 documents a real
+          production outage -- a DNS conflict between two AWS Amplify apps claiming the same CloudFront distribution,
+          compounded by a missing IAM service role. The postmortem includes detection timeline, root cause chain,
+          remediation steps, and lessons learned, modeled after standard SRE postmortem format. The log is
+          version-controlled and rendered client-side with no backend.
+        </p>
+        <p class="text-sm text-muted">
+          Stack: HTML &middot; CSS &middot; JavaScript &middot; AWS Amplify &middot; GitHub Actions
+        </p>
+        <p>
+          <a href="https://github.com/bryce-a-smith/Website/tree/main/site" target="_blank" class="project-link"
             >GitHub Repo</a
           >
         </p>
@@ -110,17 +97,37 @@
 
     <section class="section">
       <div class="container">
+        <h3>Micro.blog Social Media App</h3>
+        <p>
+          A full-stack microblogging application built during the Year Up program. Users can create posts with text,
+          images, video, and YouTube embeds, like and unlike posts, and sort the feed by newest, oldest, most liked, or
+          username. Posts render media dynamically client-side -- URLs in post text are detected, stripped from the
+          visible content, and rendered as the appropriate media element. Built with vanilla JavaScript against a REST
+          API with JWT authentication. <br />
+          Backend API no longer hosted - source code available on GitHub.
+        </p>
+        <p class="text-sm text-muted">
+          Stack: JavaScript &middot; HTML &middot; CSS &middot; REST API &middot; JWT Authentication
+        </p>
+        <p>
+          <a href="https://github.com/bryce-a-smith/microblog" target="_blank" class="project-link">GitHub Repo</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
         <h3>
-          <a href="incidents.html" class="project-link">Incident Postmortems</a>
+          <a href="index.html" class="project-link">AldenBryce.dev</a>
         </h3>
         <p>
-          Built an incident management workflow for my personal infrastructure — from detection through documentation.
-          Incidents are stored in a version-controlled JSON file and rendered client-side with no backend required. Each
-          entry includes a structured root cause analysis and remediation timeline, modeled after standard SRE
-          postmortem format. The log is publicly visible on the site and doubles as a portfolio artifact demonstrating
-          operational thinking alongside the technical work.
-          <br />
-          <strong>Stack:</strong> HTML · CSS · JavaScript · AWS Amplify · GitHub Actions
+          Personal portfolio with multi-environment deployments across dev, qa, and prod via GitHub Actions and AWS
+          Amplify branch deployments. Shared CSS architecture across projects via a hosted theme file. GitHub API
+          integration shows last commit timestamp per branch in the footer of every page.
+        </p>
+        <p class="text-sm text-muted">
+          Stack: HTML &middot; CSS &middot; JavaScript &middot; AWS Amplify &middot; AWS Route 53 &middot; GitHub
+          Actions
         </p>
         <p>
           <a href="https://github.com/bryce-a-smith/Website/tree/main/site" target="_blank" class="project-link"
@@ -130,7 +137,7 @@
       </div>
     </section>
 
-    <section id="projects" class="section alt">
+    <section class="section">
       <div class="container">
         <h3>
           <a href="https://shop.allisonalden.com/" target="_blank" class="project-link">shop.AllisonAlden.com</a>
@@ -142,20 +149,7 @@
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <div class="container">
-        <h3>Micro.blog Social Media App</h3>
-        <p>
-          A microblogging social media application built using JavaScript, HTML, & CSS. The project features user
-          authentication, post creation, and a responsive design to provide an engaging user experience across devices.
-        </p>
-        <p>
-          <a href="https://github.com/bryce-a-smith/microblog" target="_blank" class="project-link">GitHub Repo</a>
-        </p>
-      </div>
-    </section>
-
-    <section id="projects" class="section alt">
+    <!-- <section id="projects" class="section alt">
       <div class="container">
         <h3>
           <a href="VisitorsBureau/index.html" class="project-link">Visitor's Bureau</a>
@@ -174,17 +168,17 @@
           >
         </p>
       </div>
-    </section>
+    </section> -->
 
-    <section id="projects" class="section">
+    <section id="projects" class="section alt">
       <div class="container">
         <h3>Additional Projects</h3>
-        <p>Additional portfolio projects will be added here soon.</p>
+        <p>Additional portfolio projects will continue to be added here.</p>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section alt">
+    <section id="contact" class="section">
       <div class="container">
         <h3>Contact</h3>
         <p>Email: <a href="mailto:alden.smith@aldenbryce.com">alden.smith@aldenbryce.com</a></p>
