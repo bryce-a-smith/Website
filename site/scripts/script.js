@@ -1,61 +1,107 @@
 "use strict";
 
-function getEnvironment() {
-  const host = window.location.hostname;
-  if (host.startsWith("dev.")) return "DEV";
-  if (host.startsWith("qa.")) return "QA";
-  return null;
+// which site this script belongs to -- only thing that differs from monitoring-pipeline
+const CONFIG = { siteId: "portfolio" };
+
+// -- data layer -- //
+
+const SITES = [
+  { id: "portfolio", owner: "bryce-a-smith", repo: "Website", rootDomain: "aldenbryce.com" },
+  { id: "monitoring", owner: "bryce-a-smith", repo: "monitoring-pipeline", rootDomain: "status.aldenbryce.com" },
+];
+
+// -- pure utils -- //
+
+function getBranchFromUrl(url) {
+  const hostname = new URL(url).hostname;
+  if (hostname.startsWith("dev.")) return "dev";
+  if (hostname.startsWith("qa.")) return "qa";
+  return "main";
 }
 
-function showEnvLabel(envLabel) {
-  const env = getEnvironment();
-
-  if (!envLabel) return;
-  if (env) envLabel.textContent = env;
+function getBranch(hostname) {
+  if (hostname.startsWith("dev.")) return "dev";
+  if (hostname.startsWith("qa.")) return "qa";
+  return "main";
 }
 
-async function fetchLastDeployed() {
-  const host = window.location.hostname;
-  let branch = "main";
-  if (host.startsWith("dev.")) branch = "dev";
-  if (host.startsWith("qa.")) branch = "qa";
+function getEnv(hostname) {
+  if (hostname.startsWith("dev.")) return "DEV";
+  if (hostname.startsWith("qa.")) return "QA";
+  return "Production";
+}
 
-  const url = `https://api.github.com/repos/bryce-a-smith/Website/commits?sha=${branch}&per_page=1`;
-  const response = await fetch(url);
-  if (!response.ok) throw new Error(`GitHub API ${response.status}`);
+function isProd(hostname) {
+  return getEnv(hostname) === "Production";
+}
 
-  const data = await response.json();
+function formatDate(iso, options) {
+  if (!iso) return "unavailable";
+  const defaults = { month: "short", day: "numeric", year: "numeric" };
+  return new Date(iso).toLocaleDateString("en-US", options || defaults);
+}
+
+function setText(element, text) {
+  if (element) element.textContent = text;
+}
+
+// -- api -- //
+
+function getSite(siteId) {
+  const site = SITES.find((s) => s.id === siteId);
+  if (!site) throw new Error(`unknown siteId: ${siteId}`);
+  return site;
+}
+
+async function fetchLastDeployed(siteId, branch) {
+  const site = getSite(siteId);
+  const url = `https://api.github.com/repos/${site.owner}/${site.repo}/commits?sha=${branch}&per_page=1`;
+
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`GitHub API ${res.status} -- ${site.repo}@${branch}`);
+
+  const data = await res.json();
+  if (!data.length) throw new Error(`no commits found -- ${site.repo}@${branch}`);
+
   return data[0].commit.committer.date;
 }
 
-async function init() {
-  const envLabel = document.getElementById("env-label");
-  const lastDeployed = document.getElementById("last-deployed");
+// -- init -- //
 
-  // Check if the required elements are present in the DOM
-  if (!envLabel || !lastDeployed) {
-    console.warn("One or more required elements not found. Skipping initialization.");
+async function init() {
+  const host = window.location.hostname;
+  const branch = getBranch(host);
+
+  // header env badge -- hidden on prod
+  const envLabelHeader = document.getElementById("env-label-header");
+  if (envLabelHeader) {
+    if (!isProd(host)) {
+      envLabelHeader.textContent = getEnv(host);
+      envLabelHeader.style.display = "inline-block";
+    } else {
+      envLabelHeader.style.display = "none";
+    }
   }
 
-  showEnvLabel(envLabel);
+  // footer last commit date
+  const dateLastDeployedFooter = document.getElementById("date-last-deployed-footer");
 
   try {
-    if (lastDeployed) {
-      const raw = await fetchLastDeployed();
-      lastDeployed.textContent = new Date(raw).toLocaleDateString("en-US", {
+    const raw = await fetchLastDeployed(CONFIG.siteId, branch);
+    setText(
+      dateLastDeployedFooter,
+      formatDate(raw, {
         month: "short",
         day: "numeric",
         year: "numeric",
         hour: "2-digit",
         minute: "2-digit",
         timeZoneName: "short",
-      });
-    }
+      }),
+    );
   } catch (err) {
-    console.error("Failed to fetch last deployed date:", err);
-    if (lastDeployed) {
-      lastDeployed.textContent = "Unavailable";
-    }
+    console.error("fetchLastDeployed failed:", err);
+    setText(dateLastDeployedFooter, "unavailable");
   }
 }
 
