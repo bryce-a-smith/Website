@@ -159,6 +159,11 @@ a:hover {
   color: inherit;
 }
 
+.unstyled-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 .project-link:hover {
   text-decoration: underline;
 }
