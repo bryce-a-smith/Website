@@ -30,126 +30,128 @@
       </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-        <h2>Projects</h2>
-        <p class="hero-subtext">
-          A selection of projects showcasing my experience in software development. These projects highlight my ability
-          to contribute to building features and improving system performance.
-        </p>
-        <p>
-          <a href="https://github.com/bryce-a-smith" target="_blank" class="project-link">GitHub Profile</a>
-        </p>
-      </div>
-    </section>
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container">
+          <h2>Projects</h2>
+          <p class="hero-subtext">
+            A selection of projects showcasing my experience in software development. These projects highlight my
+            ability to contribute to building features and improving system performance.
+          </p>
+          <p>
+            <a href="https://github.com/bryce-a-smith" target="_blank" class="project-link">GitHub Profile</a>
+          </p>
+        </div>
+      </section>
 
-    <!-- PROJECTS -->
+      <!-- PROJECTS -->
 
-    <section class="section">
-      <div class="container">
-        <h3>
-          <a href="https://status.aldenbryce.com/" target="_blank" class="project-link"
-            >Monitoring & Alerting Pipeline</a
-          >
-        </h3>
-        <p>
-          Designed and deployed a lightweight observability stack across six environments -- because if you're going to
-          talk about production reliability, your own infrastructure should demonstrate it. Automated health checks run
-          every five minutes via GitHub Actions cron, writing results to a dedicated data branch without triggering a
-          redeploy. The status page fetches live health data and per-branch last commit timestamps in parallel,
-          rendering independently so one failed request never blocks another.
-        </p>
-        <p class="text-sm text-muted">
-          Stack: GitHub Actions &middot; AWS Amplify &middot; AWS Route 53 &middot; AWS ACM &middot; CloudFront &middot;
-          JavaScript &middot; UptimeRobot
-        </p>
-        <p>
-          <a href="https://github.com/bryce-a-smith/monitoring-pipeline" target="_blank" class="project-link"
-            >GitHub Repo</a
-          >
-        </p>
-      </div>
-    </section>
+      <section class="section">
+        <div class="container">
+          <h3>
+            <a href="https://status.aldenbryce.com/" target="_blank" class="project-link"
+              >Monitoring & Alerting Pipeline</a
+            >
+          </h3>
+          <p>
+            Designed and deployed a lightweight observability stack across six environments -- because if you're going
+            to talk about production reliability, your own infrastructure should demonstrate it. Automated health checks
+            run every five minutes via GitHub Actions cron, writing results to a dedicated data branch without
+            triggering a redeploy. The status page fetches live health data and per-branch last commit timestamps in
+            parallel, rendering independently so one failed request never blocks another.
+          </p>
+          <p class="text-sm text-muted">
+            Stack: GitHub Actions &middot; AWS Amplify &middot; AWS Route 53 &middot; AWS ACM &middot; CloudFront
+            &middot; JavaScript &middot; UptimeRobot
+          </p>
+          <p>
+            <a href="https://github.com/bryce-a-smith/monitoring-pipeline" target="_blank" class="project-link"
+              >GitHub Repo</a
+            >
+          </p>
+        </div>
+      </section>
 
-    <section class="section alt">
-      <div class="container">
-        <h3>
-          <a href="incidents.html" class="project-link">Incident Log</a>
-        </h3>
-        <p>
-          Built a structured incident management workflow for personal infrastructure. INC-001 documents a real
-          production outage -- a DNS conflict between two AWS Amplify apps claiming the same CloudFront distribution,
-          compounded by a missing IAM service role. The postmortem includes detection timeline, root cause chain,
-          remediation steps, and lessons learned, modeled after standard SRE postmortem format. The log is
-          version-controlled and rendered client-side with no backend.
-        </p>
-        <p class="text-sm text-muted">
-          Stack: HTML &middot; CSS &middot; JavaScript &middot; AWS Amplify &middot; GitHub Actions
-        </p>
-        <p>
-          <a href="https://github.com/bryce-a-smith/Website/tree/main/site" target="_blank" class="project-link"
-            >GitHub Repo</a
-          >
-        </p>
-      </div>
-    </section>
+      <section class="section alt">
+        <div class="container">
+          <h3>
+            <a href="incidents.html" class="project-link">Incident Log</a>
+          </h3>
+          <p>
+            Built a structured incident management workflow for personal infrastructure. INC-001 documents a real
+            production outage -- a DNS conflict between two AWS Amplify apps claiming the same CloudFront distribution,
+            compounded by a missing IAM service role. The postmortem includes detection timeline, root cause chain,
+            remediation steps, and lessons learned, modeled after standard SRE postmortem format. The log is
+            version-controlled and rendered client-side with no backend.
+          </p>
+          <p class="text-sm text-muted">
+            Stack: HTML &middot; CSS &middot; JavaScript &middot; AWS Amplify &middot; GitHub Actions
+          </p>
+          <p>
+            <a href="https://github.com/bryce-a-smith/Website/tree/main/site" target="_blank" class="project-link"
+              >GitHub Repo</a
+            >
+          </p>
+        </div>
+      </section>
 
-    <section class="section">
-      <div class="container">
-        <h3>Micro.blog Social Media App</h3>
-        <p>
-          A full-stack microblogging application built during the Year Up program. Users can create posts with text,
-          images, video, and YouTube embeds, like and unlike posts, and sort the feed by newest, oldest, most liked, or
-          username. Posts render media dynamically client-side -- URLs in post text are detected, stripped from the
-          visible content, and rendered as the appropriate media element. Built with vanilla JavaScript against a REST
-          API with JWT authentication. <br />
-          Backend API no longer hosted - source code available on GitHub.
-        </p>
-        <p class="text-sm text-muted">
-          Stack: JavaScript &middot; HTML &middot; CSS &middot; REST API &middot; JWT Authentication
-        </p>
-        <p>
-          <a href="https://github.com/bryce-a-smith/microblog" target="_blank" class="project-link">GitHub Repo</a>
-        </p>
-      </div>
-    </section>
+      <section class="section">
+        <div class="container">
+          <h3>Micro.blog Social Media App</h3>
+          <p>
+            A full-stack microblogging application built during the Year Up program. Users can create posts with text,
+            images, video, and YouTube embeds, like and unlike posts, and sort the feed by newest, oldest, most liked,
+            or username. Posts render media dynamically client-side -- URLs in post text are detected, stripped from the
+            visible content, and rendered as the appropriate media element. Built with vanilla JavaScript against a REST
+            API with JWT authentication. <br />
+            Backend API no longer hosted - source code available on GitHub.
+          </p>
+          <p class="text-sm text-muted">
+            Stack: JavaScript &middot; HTML &middot; CSS &middot; REST API &middot; JWT Authentication
+          </p>
+          <p>
+            <a href="https://github.com/bryce-a-smith/microblog" target="_blank" class="project-link">GitHub Repo</a>
+          </p>
+        </div>
+      </section>
 
-    <section class="section alt">
-      <div class="container">
-        <h3>
-          <a href="index.html" class="project-link">AldenBryce.dev</a>
-        </h3>
-        <p>
-          Personal portfolio with multi-environment deployments across dev, qa, and prod via GitHub Actions and AWS
-          Amplify branch deployments. Shared CSS architecture across projects via a hosted theme file. GitHub API
-          integration shows last commit timestamp per branch in the footer of every page.
-        </p>
-        <p class="text-sm text-muted">
-          Stack: HTML &middot; CSS &middot; JavaScript &middot; AWS Amplify &middot; AWS Route 53 &middot; GitHub
-          Actions
-        </p>
-        <p>
-          <a href="https://github.com/bryce-a-smith/Website/tree/main/site" target="_blank" class="project-link"
-            >GitHub Repo</a
-          >
-        </p>
-      </div>
-    </section>
+      <section class="section alt">
+        <div class="container">
+          <h3>
+            <a href="index.html" class="project-link">AldenBryce.dev</a>
+          </h3>
+          <p>
+            Personal portfolio with multi-environment deployments across dev, qa, and prod via GitHub Actions and AWS
+            Amplify branch deployments. Shared CSS architecture across projects via a hosted theme file. GitHub API
+            integration shows last commit timestamp per branch in the footer of every page.
+          </p>
+          <p class="text-sm text-muted">
+            Stack: HTML &middot; CSS &middot; JavaScript &middot; AWS Amplify &middot; AWS Route 53 &middot; GitHub
+            Actions
+          </p>
+          <p>
+            <a href="https://github.com/bryce-a-smith/Website/tree/main/site" target="_blank" class="project-link"
+              >GitHub Repo</a
+            >
+          </p>
+        </div>
+      </section>
 
-    <section class="section">
-      <div class="container">
-        <h3>
-          <a href="https://shop.allisonalden.com/" target="_blank" class="project-link">shop.AllisonAlden.com</a>
-        </h3>
-        <p>
-          A collaborative brand e-commerce website built using HTML, CSS, and JavaScript through Shopify. The online
-          shop features a responsive design and user interface to provide a seamless shopping experience for customers.
-        </p>
-      </div>
-    </section>
+      <section class="section">
+        <div class="container">
+          <h3>
+            <a href="https://shop.allisonalden.com/" target="_blank" class="project-link">shop.AllisonAlden.com</a>
+          </h3>
+          <p>
+            A collaborative brand e-commerce website built using HTML, CSS, and JavaScript through Shopify. The online
+            shop features a responsive design and user interface to provide a seamless shopping experience for
+            customers.
+          </p>
+        </div>
+      </section>
 
-    <!-- <section id="projects" class="section alt">
+      <!-- <section id="projects" class="section alt">
       <div class="container">
         <h3>
           <a href="VisitorsBureau/index.html" class="project-link">Visitor's Bureau</a>
@@ -170,23 +172,25 @@
       </div>
     </section> -->
 
-    <section id="projects" class="section alt">
-      <div class="container">
-        <h3>Additional Projects</h3>
-        <p>Additional portfolio projects will continue to be added here.</p>
-      </div>
-    </section>
+      <section id="projects" class="section alt">
+        <div class="container">
+          <h3>Additional Projects</h3>
+          <p>Additional portfolio projects will continue to be added here.</p>
+        </div>
+      </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:alden.smith@aldenbryce.com">alden.smith@aldenbryce.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/aldenbryce" target="_blank">linkedin.com/in/aldenbryce</a></p>
-        <p>Github: <a href="https://github.com/bryce-a-smith" target="_blank">github.com/bryce-a-smith</a></p>
-      </div>
-    </section>
-
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="container">
+          <h3>Contact</h3>
+          <p>Email: <a href="mailto:alden.smith@aldenbryce.com">alden.smith@aldenbryce.com</a></p>
+          <p>
+            LinkedIn: <a href="https://www.linkedin.com/in/aldenbryce" target="_blank">linkedin.com/in/aldenbryce</a>
+          </p>
+          <p>Github: <a href="https://github.com/bryce-a-smith" target="_blank">github.com/bryce-a-smith</a></p>
+        </div>
+      </section>
+    </main>
     <!-- FOOTER -->
     <footer class="footer">
       <p>

@@ -1,5 +1,6 @@
 "use strict";
 
+/*
 function formatDate(iso) {
   if (!iso) return "—";
   return new Date(iso).toLocaleDateString("en-US", {
@@ -7,6 +8,13 @@ function formatDate(iso) {
     day: "numeric",
     year: "numeric",
   });
+}
+*/
+
+function formatDate(iso, options) {
+  if (!iso) return "unavailable";
+  const defaults = { month: "short", day: "numeric", year: "numeric" };
+  return new Date(iso).toLocaleDateString("en-US", options || defaults); // allows overriding defaults with custom options
 }
 
 function formatDowntime(mins) {

@@ -77,12 +77,19 @@
    -------------------------------------------------------------------------- */
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   padding-top: env(safe-area-inset-top);
   font-family: var(--font-base);
   line-height: var(--line-height-base);
   color: var(--color-text);
   background: var(--color-bg);
   font-size: var(--font-size-base);
+}
+
+main {
+  flex: 1;
 }
 
 /* --------------------------------------------------------------------------
