@@ -51,6 +51,19 @@ body {
   justify-content: flex-end; /* Align links to the right */
 }
 
+.env-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: #fef9c3;
+  color: #92400e;
+  vertical-align: middle;
+  margin-left: 8px;
+  text-transform: uppercase;
+}
+
 .nav-links a {
   text-decoration: none;
   color: #374151;
