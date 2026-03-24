@@ -1,7 +1,10 @@
 "use strict";
 
 // which site this script belongs to -- only thing that differs from monitoring-pipeline
-const CONFIG = { siteId: "portfolio" };
+const CONFIG = {
+  siteId: "portfolio",
+  resumeFile: "https://aldenbryce.com/docs/AldenSmith_Platform_Engineer.pdf",
+};
 
 // -- data layer -- //
 
@@ -69,6 +72,11 @@ async function fetchLastDeployed(siteId, branch) {
 // -- init -- //
 
 async function init() {
+  //set resume link
+  document.querySelectorAll(".resume-link").forEach((link) => {
+    link.href = CONFIG.resumeFile;
+  });
+
   const host = window.location.hostname;
   const branch = getBranch(host);
 
