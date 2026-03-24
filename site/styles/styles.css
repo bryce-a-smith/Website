@@ -33,3 +33,7 @@
 .nav-links a {
   color: #374151;
 }
+
+.incident-card {
+  margin-bottom: 3rem;
+}
