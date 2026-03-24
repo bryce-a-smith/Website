@@ -18,5 +18,24 @@
       "Validate new domain configurations on isolated subdomains before touching a shared root domain"
     ],
     "portfolioWorthy": true
+  },
+  {
+    "id": "INC-002",
+    "title": "api.aldenbryce.com — DNS resolution failure due to malformed CNAME value",
+    "status": "Resolved",
+    "severity": "Medium",
+    "startTime": "2026-03-23T23:00:00",
+    "resolvedTime": "2026-03-24T13:22:00",
+    "downtimeMinutes": 862,
+    "environments": ["api.aldenbryce.com"],
+    "rootCause": "Route 53 CNAME record value contained an https:// protocol prefix, which is invalid for DNS records. Initial DNS caching masked the misconfiguration until all caches expired overnight.",
+    "summary": "api.aldenbryce.com was initially working after deployment on March 23 due to DNS caching, but became unreachable overnight once all caches expired. The CNAME record was created with https://energy-api-yne8.onrender.com instead of the bare hostname. DNS resolvers returned NXDOMAIN on fresh lookups. The Render service was healthy throughout. Resolved by removing the https:// prefix from the Route 53 CNAME value.",
+    "lessonsLearned": [
+      "CNAME values must be bare hostnames - no protocol prefix, no path, no port",
+      "DNS caching can mask misconfiguration - always verify with a fresh incognito window or flushed DNS cache after setup",
+      "When a domain is unreachable, test the underlying service URL directly first to isolate DNS vs application failure",
+      "Managed platform domain verification does not validate upstream DNS record format - verify end-to-end from a browser"
+    ],
+    "portfolioWorthy": true
   }
 ]
